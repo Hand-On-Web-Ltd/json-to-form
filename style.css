@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --primary: #2563eb; --bg: #f1f5f9; --card: #fff; --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; --success: #22c55e; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+header { background: var(--card); padding: 1rem 2rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+header h1 { font-size: 1.3rem; }
+.header-btns { display: flex; gap: 0.5rem; }
+.btn { padding: 0.5rem 1rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-success { background: var(--success); color: white; }
+.btn-outline { background: none; border: 1px solid var(--border); }
+.app { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 56px); }
+.panel { padding: 1.5rem; overflow-y: auto; }
+.panel-left { background: #1e293b; }
+.panel-left h3 { color: #94a3b8; font-size: 0.85rem; margin-bottom: 0.75rem; }
+#schemaInput { width: 100%; height: calc(100vh - 150px); background: #0f172a; color: #e2e8f0; border: 1px solid #334155; border-radius: 8px; padding: 1rem; font-family: 'Fira Code', 'Consolas', monospace; font-size: 0.9rem; resize: none; }
+.panel-right { background: var(--bg); }
+.form-preview { background: var(--card); border-radius: 10px; padding: 2rem; border: 1px solid var(--border); max-width: 500px; }
+.form-preview h2 { margin-bottom: 1.5rem; font-size: 1.3rem; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; font-size: 0.9rem; margin-bottom: 0.35rem; font-weight: 500; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.65rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; }
+.form-group textarea { height: 100px; resize: vertical; }
+.form-group.checkbox { display: flex; align-items: center; gap: 0.5rem; }
+.form-group.checkbox input { width: auto; }
+.required::after { content: ' *'; color: #ef4444; }
+.submit-btn { padding: 0.75rem 2rem; background: var(--primary); color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+.error { color: #ef4444; font-size: 0.85rem; padding: 1rem; }
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 100; }
+.modal.active { display: flex; }
+.modal-body { background: white; border-radius: 12px; padding: 2rem; width: 90%; max-width: 600px; }
+.modal-body textarea { width: 100%; height: 300px; font-family: monospace; font-size: 0.85rem; border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+.modal-body .btn { margin-top: 1rem; margin-right: 0.5rem; }
+@media (max-width: 768px) { .app { grid-template-columns: 1fr; } }
