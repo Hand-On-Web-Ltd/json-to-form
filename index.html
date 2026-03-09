@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON to Form Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📝 JSON to Form</h1>
+    <div class="header-btns">
+      <button class="btn btn-primary" onclick="generate()">Generate Form</button>
+      <button class="btn btn-success" onclick="exportHTML()">Export HTML</button>
+    </div>
+  </header>
+  <div class="app">
+    <div class="panel panel-left">
+      <h3>JSON SCHEMA</h3>
+      <textarea id="schemaInput" spellcheck="false"></textarea>
+    </div>
+    <div class="panel panel-right">
+      <div id="formPreview"></div>
+    </div>
+  </div>
+  <div id="exportModal" class="modal">
+    <div class="modal-body">
+      <h3>Export Form HTML</h3>
+      <p style="color:var(--text-light);margin:0.5rem 0 1rem">Copy this HTML and paste it into your project.</p>
+      <textarea id="exportCode" readonly></textarea>
+      <button class="btn btn-primary" onclick="copyCode()">Copy to Clipboard</button>
+      <button class="btn btn-outline" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
